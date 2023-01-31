@@ -23,11 +23,11 @@ public class Main {
 
             if (countOfTickets != 0) {
                 queue.peek().setNumberOfTickets((countOfTickets - 1));
-                int clientTickets = queue.peek().getNumberOfTickets();
+                countOfTickets = queue.peek().getNumberOfTickets();
                 queue.addLast(queue.peek());
                 queue.poll();
 
-                System.out.println(clientName + " " + clientSurname + " прокатился на аттракционе!\n" + "Остаток билетов: " + clientTickets + "\n");
+                System.out.println(clientName + " " + clientSurname + " прокатился на аттракционе!\n" + "Остаток билетов: " + countOfTickets + "\n");
             } else {
                 queue.poll();
             }
