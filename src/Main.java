@@ -24,9 +24,7 @@ public class Main {
             if (countOfTickets != 0) {
                 queue.peek().setNumberOfTickets((countOfTickets - 1));
                 countOfTickets = queue.peek().getNumberOfTickets();
-                queue.addLast(queue.peek());
-                queue.poll();
-
+                queue.addLast(queue.poll());
                 System.out.println(clientName + " " + clientSurname + " прокатился на аттракционе!\n" + "Остаток билетов: " + countOfTickets + "\n");
             } else {
                 queue.poll();
